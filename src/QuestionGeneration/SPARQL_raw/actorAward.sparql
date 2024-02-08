@@ -1,0 +1,12 @@
+SELECT ?actor ?actorLabel ?award ?awardLabel ?date ?forWork ?forWorkLabel
+WHERE
+{
+  # find a human
+  ?actor wdt:P31 wd:Q5 .
+  ?actor p:P166 ?awardstatement .
+  ?awardstatement ps:P166 ?award .
+  ?awardstatement pq:P585 ?date .
+  ?awardstatement pq:P1686 ?forWork .
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+}
+limit 10

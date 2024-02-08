@@ -1,0 +1,18 @@
+SELECT distinct ?event ?eventLabel ?startTime ?endTime ?pointTime WHERE {
+
+  ?event wdt:P31/wdt:P279* [ENTITY].
+  
+  Optional { ?event wdt:P582 ?endTime.}
+  Optional { ?event wdt:P585 ?pointTime.}
+  Optional { ?event wdt:P580 ?startTime.}
+  
+  { ?event wdt:P585 ?w585. BIND (?w585 as ?w)} UNION { ?event wdt:P580 ?w580. BIND (?w580 as ?w)
+       }                                           
+  FILTER ( YEAR(?w) >= 1987 )
+  FILTER ( YEAR(?w) <= 2007 )
+  
+
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+
+}
+ORDER BY ASC(?w)

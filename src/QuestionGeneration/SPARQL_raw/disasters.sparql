@@ -1,0 +1,11 @@
+SELECT ?negaraLabel (COUNT(?b) AS ?bc) WHERE {
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+  { ?b wdt:P31/wdt:P279* wd:Q8065.
+    ?b wdt:P17 ?negara.
+  { ?b wdt:P585 ?w585. BIND (?w585 as ?w)} UNION { ?b wdt:P580 ?w580. BIND (?w580 as ?w)}
+  FILTER ( YEAR(?w) >= 1970 )
+  }  
+}
+GROUP BY ?negara ?negaraLabel
+ORDER BY DESC(?bc)
+#defaultView:BarChart

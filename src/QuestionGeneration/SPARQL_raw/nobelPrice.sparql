@@ -1,0 +1,18 @@
+SELECT ?person ?personLabel ?award ?awardLabel ?date ?forWork ?forWorkLabel
+WHERE
+{
+  # find a human
+  ?person wdt:P31 wd:Q5 .
+  
+  #person recived award
+  ?award wdt:P279?/wdt:P31? wd:Q7191 .    
+  ?person wdt:P166? ?award .               
+  
+  ?person p:P166 ?awardstatement .
+  ?awardstatement ps:P166 ?award .
+  ?awardstatement pq:P585 ?date .
+  ?awardstatement pq:P1686 ?forWork .
+  
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+}
+order by ?date

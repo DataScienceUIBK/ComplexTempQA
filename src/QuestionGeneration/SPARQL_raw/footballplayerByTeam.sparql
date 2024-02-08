@@ -1,0 +1,11 @@
+SELECT ?player ?playerLabel ?member ?memberLabel ?start ?end {
+
+   ?player wdt:P106/wdt:P279* wd:Q937857 . 
+   ?player p:P54 ?member .
+  
+   ?member pq:P580 ?start .
+   ?member pq:P582 ?end .
+
+SERVICE wikibase:label {bd:serviceParam wikibase:language "en" . }
+
+}

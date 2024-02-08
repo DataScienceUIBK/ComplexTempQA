@@ -1,0 +1,12 @@
+SELECT ?actor ?actorLabel ?awardsNumber WHERE {
+{
+    SELECT ?actor (COUNT(DISTINCT ?award) AS ?awardsNumber) 
+    WHERE {
+       ?actor wdt:P106 wd:Q33999 .
+       ?actor wdt:P166 ?award.   
+    }  
+    GROUP BY ?actor
+}         
+SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
+}
+ORDER BY DESC (?awardsNumber)
