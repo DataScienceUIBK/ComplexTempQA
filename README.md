@@ -23,4 +23,4 @@ This repository contains a large-scale temporal question answering dataset desig
 
 ## Dataset
 
-- **Download**: The dataset is available at Hugging Face
+- **Download**: The dataset is available at [Hugging Face](https://huggingface.co/datasets/DataScienceUIBK/ComplexTempQA)
