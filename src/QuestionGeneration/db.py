@@ -124,39 +124,6 @@ def readAttributeEvents():
     return read_db('select * from "Events_attributes_int"')
 
 
-#TODO delete
-def read_questions(table, add, limit):
-    if limit > 0:
-        limit = "limit " + str(limit)
-    else:
-        limit = ""
-    return read_db('SELECT setseed(0.42); select * from "' + table + '" ' + add + " ORDER BY random()" + limit)
-
-#TODO delete
-def read_questionsNew(table_name, add, batch_size=1000, max_rows=None):
-    if max_rows is None:
-        query = f'SELECT * FROM "{table_name}" {add} order by id'
-    else:
-        query = f'SELECT setseed(0.42);  SELECT * FROM "{table_name}" {add} ORDER BY random()'
-    offset = 0
-    rows_read = 0
-
-    while max_rows is None or rows_read < max_rows:
-        # Calculate the batch size for the current iteration
-        current_batch_size = min(batch_size, max_rows - rows_read) if max_rows is not None else batch_size
-        print(current_batch_size)
-        print(offset)
-        # Fetch data in batches using LIMIT and OFFSET
-        result = read_db(f"{query} LIMIT {current_batch_size} OFFSET {offset}")
-        if not result:
-            break
-
-        for row in result:
-            yield row
-
-        offset += current_batch_size
-        rows_read += len(result)
-
 def read_event(eventId):
     return read_db('select "Name", "description"  from "Events2" ' +
                    'where "EventID" = ' + str(eventId))
