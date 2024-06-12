@@ -1,6 +1,0 @@
-#The awards received by Cristiano Ronaldo by year
-SELECT ?entity ?entityLabel (year(?date) as ?year) {
-  wd:Q11571 p:P166 [ps:P166 ?entity ; pq:P585 ?date ]
-            
-  SERVICE wikibase:label {bd:serviceParam wikibase:language "en" . }
-} ORDER BY ?year
