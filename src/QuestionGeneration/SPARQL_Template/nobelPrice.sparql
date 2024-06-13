@@ -1,22 +1,18 @@
-SELECT ?itemLabel ?date 
+SELECT ?person ?personLabel ?award ?awardLabel ?date ?forWork ?forWorkLabel
 WHERE
 {
   # find a human
-  ?item wdt:P31 wd:Q5 .
+  ?person wdt:P31 wd:Q5 .
   
   #person recived award
-  ?award wdt:P279?/wdt:P31? [ENTITY] .    
-  ?item wdt:P166? ?award .               
+  ?award wdt:P279?/wdt:P31? wd:Q7191 .    
+  ?person wdt:P166? ?award .               
   
-  ?item p:P166 ?awardstatement .
+  ?person p:P166 ?awardstatement .
   ?awardstatement ps:P166 ?award .
   ?awardstatement pq:P585 ?date .
-  
-  # filter by start date here
-  FILTER(year(?date) >= 1987)
-  FILTER(year(?date) <= 2007)
-
+  ?awardstatement pq:P1686 ?forWork .
   
   SERVICE wikibase:label { bd:serviceParam wikibase:language "en" . }
 }
-ORDER BY ?date
+order by ?date

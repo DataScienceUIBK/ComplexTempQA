@@ -1,0 +1,17 @@
+SELECT ?countryLabel (COUNT(?disaster) AS ?bc) WHERE {
+
+  ?disaster wdt:P31/wdt:P279* wd:Q8065.
+  
+  ?disaster  wdt:P17 ?country.
+  ?disaster wdt:P31 wd:Q7944.
+
+  { ?disaster wdt:P585 ?w585. BIND (?w585 as ?w)} UNION { ?disaster wdt:P580 ?w580. BIND (?w580 as ?w)
+                                                  
+  FILTER ( YEAR(?w) >= 1987 )
+  FILTER ( YEAR(?w) <= 2007 )
+  }  
+    SERVICE wikibase:label { bd:serviceParam wikibase:language "[AUTO_LANGUAGE],en". }
+
+}
+GROUP BY ?country ?countryLabel
+ORDER BY DESC(?bc)

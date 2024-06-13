@@ -1,15 +1,19 @@
-SELECT ?itemLabel ?start ?end WHERE {
+SELECT ?presLabel ?start ?end ?wLabel WHERE {
 
-   ?item wdt:P31 wd:Q5 .
-   ?item [RELATION] ?position_held_statement .
-   ?position_held_statement ps:P39 [ENTITY] .
+   ?pres wdt:P31 wd:Q5 .
+   ?pres p:P39 ?position_held_statement .
+#   ?position_held_statement ps:P39 wd:Q11696 .
+   ?position_held_statement ps:P39 wd:Q887010 .
   
    ?position_held_statement pq:P580 ?start .
    ?position_held_statement pq:P582 ?end .
+  
+    #spouse
+   # ?pres wdt:P26 ?w.
 
   # filter by start date here
-  FILTER(year(?end) >= 1987)
-  FILTER(year(?start) <= 2007)
+  FILTER(year(?end) > 1987)
+  FILTER(year(?start) < 2007)
 
    SERVICE wikibase:label {
     bd:serviceParam wikibase:language "en" .
