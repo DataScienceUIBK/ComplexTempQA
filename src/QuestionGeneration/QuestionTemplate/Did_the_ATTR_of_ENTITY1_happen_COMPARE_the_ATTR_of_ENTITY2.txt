@@ -1,0 +1,1 @@
+Did the [ATTR] of [ENTITY1] happen [COMPARE] the [ATTR] of [ENTITY2]? 

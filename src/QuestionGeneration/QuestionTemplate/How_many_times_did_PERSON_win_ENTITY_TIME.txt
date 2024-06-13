@@ -1,0 +1,1 @@
+How many times did [PERSON] win [ENTITY] [TIME]? 

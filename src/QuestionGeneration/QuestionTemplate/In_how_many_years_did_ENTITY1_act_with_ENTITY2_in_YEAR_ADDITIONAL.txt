@@ -1,0 +1,1 @@
+In how many years did [ENTITY1] act with [ENTITY2] in [YEAR] [ADDITIONAL]? 

@@ -1,0 +1,1 @@
+Did [EVENT1] have a [COMPARE] [ATTR] than [EVENT2]? 

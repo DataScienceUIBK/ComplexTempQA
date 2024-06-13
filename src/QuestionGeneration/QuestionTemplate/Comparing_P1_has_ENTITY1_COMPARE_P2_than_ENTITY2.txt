@@ -1,0 +1,1 @@
+Comparing [P1], has [ENTITY1] [COMPARE] [P2] than [ENTITY2]? 

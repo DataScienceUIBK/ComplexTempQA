@@ -1,0 +1,1 @@
+Did [ENTITY1] or [ENTITY2] have a [COMPARE] [ATTR]? 
