@@ -95,8 +95,6 @@ This directory contains templates for generating questions based on various attr
 - **What was the [V] of [ENTITY]?**
   - Example: What was the country of origin of the movie Mudhalvan?
 
-*Note: More templates will be added soon.*
-
 ## Contributing
 
 If you have suggestions for new templates or improvements to existing ones, please submit a pull request or open an issue on the repository.
