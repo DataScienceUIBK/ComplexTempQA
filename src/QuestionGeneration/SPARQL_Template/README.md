@@ -17,7 +17,3 @@ SELECT ?item ?itemLabel WHERE {
 ### Contributing
 
 If you have suggestions for new templates or improvements to existing ones, please submit a pull request or open an issue on the repository.
-
-### Note
-
-More templates will be added
