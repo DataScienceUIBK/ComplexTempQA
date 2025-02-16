@@ -9,6 +9,10 @@
 
 This repository contains a large-scale temporal question answering dataset designed for evaluating and training language models on temporal reasoning tasks. The dataset consists of question-answer pairs with a focus on temporal aspects, covering a wide range of events and entities from 1987 to 2023.
 
+<p align="center">
+<img src="./src/QuestionGeneration/ExampleTimeline.png">
+</p>
+
 ## Dataset Description
 
 - **Size**: The dataset comprises **100,228,457** question-answer pairs, making it one of the largest temporal question answering datasets available.
@@ -24,3 +28,42 @@ This repository contains a large-scale temporal question answering dataset desig
 ## Dataset
 
 - **Download**: The dataset is available at [Hugging Face](https://huggingface.co/datasets/DataScienceUIBK/ComplexTempQA)
+
+
+## Question Generation
+
+This project contains Python scripts designed to generate various types of questions based on event data. The scripts read event attributes from a database, construct questions, and store them back in the database.
+<p align="center">
+<img src="./src/QuestionGeneration/pipline.png">
+</p>
+
+### Requirements
+
+- Python 3.x
+- `psycopg2` for PostgreSQL database interaction
+- `requests` for HTTP requests
+- `configparser` for reading database configuration
+- `SPARQLWrapper` for executing SPARQL queries
+
+### Setup
+
+1. Clone the repository:
+   ```bash
+   git clone <repository_url>
+   cd <repository_folder>
+2. Install the required Python packages:
+   ```bash
+   pip install psycopg2 configparser pandas
+3. Configure the database connection:
+   - Create a `database.ini` file with the following format:
+     ```ini
+     [postgresql]
+     host=your_host
+     database=your_database
+     user=your_user
+     password=your_password
+     ```
+### Running the Scripts
+
+1. Ensure your database is set up and populated with the required data.
+2. Run the question generation files for the desired type of question
