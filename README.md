@@ -57,7 +57,7 @@ This repository contains a large-scale temporal question answering dataset desig
 
 This project contains Python scripts designed to generate various types of questions based on event data. The scripts read event attributes from a database, construct questions, and store them back in the database.
 <p align="center">
-<img src="./src/QuestionGeneration/pipline.png">
+<img src="./src/QuestionGeneration/pipeline.png">
 </p>
 
 ### Requirements
