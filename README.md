@@ -91,3 +91,30 @@ This project contains Python scripts designed to generate various types of quest
 
 1. Ensure your database is set up and populated with the required data.
 2. Run the question generation files for the desired type of question
+
+### Citation
+
+Please kindly cite our paper if helps your research:
+
+```BibTex
+@inproceedings{gruber-etal-2025-complextempqa,
+    title = "{C}omplex{T}emp{QA}: A 100m Dataset for Complex Temporal Question Answering",
+    author = {Gruber, Raphael  and
+      Abdallah, Abdelrahman  and
+      F{\"a}rber, Michael  and
+      Jatowt, Adam},
+    editor = "Christodoulopoulos, Christos  and
+      Chakraborty, Tanmoy  and
+      Rose, Carolyn  and
+      Peng, Violet",
+    booktitle = "Proceedings of the 2025 Conference on Empirical Methods in Natural Language Processing",
+    month = nov,
+    year = "2025",
+    address = "Suzhou, China",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.emnlp-main.463/",
+    pages = "9111--9123",
+    ISBN = "979-8-89176-332-6",
+}
+```
+
