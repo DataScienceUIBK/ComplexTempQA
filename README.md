@@ -51,6 +51,7 @@ This repository contains a large-scale temporal question answering dataset desig
 ## Dataset
 
 - **Download**: The dataset is available at [Hugging Face](https://huggingface.co/datasets/DataScienceUIBK/ComplexTempQA)
+- **Testing Dataset**: A small version for testing purpose is available [here](./ComplexTempQA_small.json)
 
 
 ## Question Generation
