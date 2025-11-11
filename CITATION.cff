@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+message: "If you use this dataset or paper, please cite it as below."
+title: "ComplexTempQA: A 100m Dataset for Complex Temporal Question Answering"
+authors:
+  - family-names: Gruber
+    given-names: Raphael
+  - family-names: Abdallah
+    given-names: Abdelrahman
+  - family-names: Färber
+    given-names: Michael
+  - family-names: Jatowt
+    given-names: Adam
+editors:
+  - family-names: Christodoulopoulos
+    given-names: Christos
+  - family-names: Chakraborty
+    given-names: Tanmoy
+  - family-names: Rose
+    given-names: Carolyn
+  - family-names: Peng
+    given-names: Violet
+conference:
+  name: "Conference on Empirical Methods in Natural Language Processing"
+  acronym: "EMNLP"
+  year: 2025
+  location: "Suzhou, China"
+date-released: 2025-11-01
+publisher:
+  name: "Association for Computational Linguistics"
+url: "https://aclanthology.org/2025.emnlp-main.463/"
+isbn: "979-8-89176-332-6"
+pages: "9111–9123"
+type: conference-paper
